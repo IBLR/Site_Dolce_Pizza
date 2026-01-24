@@ -1,3 +1,261 @@
-h1 {
-  color: blue;
+/********** Normalize-accessible **********/
+
+/*** Box sizing universel ***/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
+/*** Reset base ***/
+html {
+  font-size: 100%;  /* For rem (preference user) */
+}
+
+body {
+  margin: 0;
+}
+
+/*** Media and graphic elements ***/
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/*** Forms ***/
+button, input, textarea {
+  font: inherit;
+}
+
+/*** Lists ***/
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+  padding: 0;
+  margin: 0
+}
+
+/*** Focus visibility for keyboard users ***/
+:focus-visible {
+  outline: 2px solid var(--color-focus-outline);
+  outline-offset: 2px;
+}
+
+/*** User motion preferences ***/
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ----------------------------------------------------------------------------------------- */
+
+/********** Tokens **********/
+
+/*** Fonts declaration ***/
+@font-face {
+  font-family: 'Alatsi';
+  src: url('../../assets/fonts/alatsi/Alatsi-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source_sans_3';
+  src: url('../../assets/fonts/source_sans_3/SourceSans3-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*** Global ***/
+:root {
+  /* Typography */
+  --font-family-display: 'Alatsi', serif, system-ui;
+  --font-family-body: 'Source_sans_3', sans-serif, system-ui;
+
+  --font-size-h1: clamp(3rem, 6.5vw, 4rem);  /* 64px -> 48px mobile */
+  --font-size-h1-subtitle: 1.5rem;  /* 24px */
+  --font-size-h2: 2rem;  /* 32px */
+  --font-size-h3: 1.75rem;  /* 28px */
+  --font-size-h4: 1.5rem;  /* 24px */
+  --font-size-high-text: 1.375rem;  /* 22px */
+  --font-size-text: 1.125rem;  /* 18px */
+
+  --line-height-h1: 1.1;
+  --line-height-h1-subtitle: 1.2;
+  --line-height-h2: 1.2;
+  --line-height-h3: 1.25;
+  --line-height-h4: 1.3;
+  --line-height-high-text: 1.4;
+  --line-height-text: 1.35;
+
+  /* Spacing scale */
+  --space-container-y: clamp(1.875rem, 3vw, 3.125rem);  /* top & bottom : 50px → 30px mobile */
+  --space-container-x: clamp(1.875rem, 7vw, 6.25rem);  /* left & right : 100px → 30px mobile */
+
+  /* Radius */
+  --radius-10: 10px;
+  --radius-50: 50px;
+
+  /* Shadows */
+  --shadow-strong: 0 4px 4px rgba(0, 0, 0, 1);
+  --shadow-light: 0 4px 4px rgba(0, 0, 0, 0.25);
+  --shadow-subtle: 3px 3px 2px rgba(0, 0, 0, 0.25);
+
+  /* Z-index scale */
+  --z-base: 1;
+  --z-header: 10;
+  --z-modal: 100;
+
+  /* Color palette */
+  --black: #2F2F2F;
+  --red: #B22222;
+  --green: #3B7A57;
+  --white: #FFFFFF;
+  --orange: #F77A13;  /* Only for Focus outline */
+  --warning-red: #FF0000;  /* Only for Error messages */
+  --success-green: #28A745;  /* Only for Validation messages */
+}
+
+/*** Theme ***/
+body.theme {
+  --color-bg-content: var(--white);
+  /* --color-bg-header: var();
+  --color-bg-footer: var(); */
+
+  /* --color-h1-content: var();
+  --color-h2-content: var();
+  --color-h3-content: var();
+  --color-h4-content: var();
+  --color-high-text-content: var();
+  --color-high-text-header: var();
+  --color-high-text-footer: var(); */
+  --color-text-content: var(--black);
+  /* --color-text-header: var();
+  --color-text-footer: var(); */
+
+  /* --color-btn-primary-bg: var();
+  --color-btn-primary-text: var();
+  --color-btn-primary-bg-hover: var();
+  --color-btn-primary-text-hover: var(); */
+
+
+  --color-error: var(--warning-red);
+  --color-validate: var(--success-green);
+
+  --color-focus-outline: var(--orange);
+}
+
+/* ----------------------------------------------------------------------------------------- */
+
+/********** Base **********/
+
+/*** Document body ***/
+body {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-text);
+  line-height: var(--line-height-text);
+  color: var(--color-text-content, #000);
+  background-color: var(--color-bg-content, #fff);
+}
+
+/*** Headings, Paragraphs et Bullets ***/
+h1, h2, h3, h4 { font-family: var(--font-family-display) }
+
+h1 {
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1);
+  letter-spacing: 2px;
+  word-spacing: 4px;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+  line-height: var(--line-height-h4);
+}
+
+h1, h2, h3, h4, p, ul, ol { margin-block: 0; }
+
+/*** Buttons ***/
+button {  /* Reset before design */
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/*** Links ***/
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*** Placeholders ***/
+input::placeholder,
+textarea::placeholder {
+  font-style: italic;
+}
+
+/* ----------------------------------------------------------------------------------------- */
+
+/********** Utilities **********/
+.heading-subtitle {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-h1-subtitle);
+  line-height: var(--line-height-h1-subtitle);
+}
+
+.high-text {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-high-text);
+  line-height: var(--line-height-high-text);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.error-message {
+  color: var(--color-error);
+  font-size: 1rem;
+}
+
+.error-message:empty {
+  display: none;  /* Hide empty message zone */
+}
+
+span.required-field {
+  color: var(--warning-red);
+}
+
+span.validated-field {
+  color: var(--success-green);
+}
+
+/* ----------------------------------------------------------------------------------------- */
+
+/********** Global-layout **********/
+/*** General containers ***/
+.layout-section {
+  max-width: 1440px;
+  margin-inline: auto;
+  padding: var(--space-container-y) var(--space-container-x);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ----------------------------------------------------------------------------------------- */
