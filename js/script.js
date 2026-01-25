@@ -16,6 +16,7 @@
     }
   });
 
+/* ----------------------------------------------------------------------------------------- */
 
 /*** CONTACT - Form validation ***/
   document.addEventListener("DOMContentLoaded", () => {
@@ -213,6 +214,7 @@
   }
 });
 
+/* ----------------------------------------------------------------------------------------- */
 
 /*** MENU - Shop & Cart ***/
 
@@ -366,20 +368,24 @@ function changeQty(key, delta) {
 }
 
 /* Clean cart */
-cartClearBtn.addEventListener("click", () => {
-  cart.clear();
-  renderCart();
-});
+if (cartClearBtn){
+  cartClearBtn.addEventListener("click", () => {
+    cart.clear();
+    renderCart();
+  });
+}
 
 /* Validation */
-cartValidateBtn.addEventListener("click", () => {
-  if (cart.size === 0) return;
+if (cartValidateBtn) {
+  cartValidateBtn.addEventListener("click", () => {
+    if (cart.size === 0) return;
 
-  cart.clear();
-  renderCart();
+    cart.clear();
+    renderCart();
 
-  showCartMessage("Commande validée avec succès");
-});
+    showCartMessage("Commande validée avec succès");
+  });
+}
 
 function showCartMessage(text) {
   cartMessage.textContent = text;
@@ -448,3 +454,46 @@ function renderCart() {
     currency: "EUR"
   });
 }
+
+/* ----------------------------------------------------------------------------------------- */
+
+/*** GALLERY - Lightbox ***/
+
+document.addEventListener('DOMContentLoaded', function() {
+  const galleryItems = document.querySelectorAll('.gallery-item');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImage = document.getElementById('lightboxImage');
+  const closeBtn = document.getElementById('closeLightbox');
+
+  // Ouvrir la lightbox en cliquant sur une image
+  galleryItems.forEach(item => {
+    item.addEventListener('click', (e) => {
+      lightbox.style.display = 'flex';
+      // Récupère l'URL de l'image en grande taille depuis l'attribut data-large
+      lightboxImage.src = e.target.getAttribute('data-large');
+    });
+  });
+
+  // Fermer la lightbox en cliquant sur la croix
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+  }
+
+  if (lightbox) {
+    // Fermer la lightbox en cliquant en dehors de l'image
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+      }
+    });
+
+    // Fermer la lightbox avec la touche Échap
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        lightbox.style.display = 'none';
+      }
+    });
+  }
+});

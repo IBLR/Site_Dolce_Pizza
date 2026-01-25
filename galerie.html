@@ -9,29 +9,31 @@
 </head>
 
 <body class="theme">
-  <header class="header">
-    <div class="logo">
-      <a href="index.html">
-        <img src="assets/img/branding/logo.png" alt="Logo du site La Dolce Pizza, page d'accueil">
-        <p class="high-text">La Dolce Pizza</p>
-      </a>
-    </div>
+  <div class="header-container">
+    <header class="header">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/img/branding/logo.png" alt="Logo du site La Dolce Pizza, page d'accueil">
+          <p class="high-text">La Dolce Pizza</p>
+        </a>
+      </div>
 
-    <nav class="header-nav" id="primary-navigation" aria-label="Navigation principale">
-      <ul role="list" class="high-text">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="galerie.html">Galerie</a></li>
-        <li><a href="contact.html">Contact &amp; Réservation</a></li>
-      </ul>
-    </nav>
+      <nav class="header-nav" id="primary-navigation" aria-label="Navigation principale">
+        <ul role="list" class="high-text">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="contact.html">Contact &amp; Réservation</a></li>
+        </ul>
+      </nav>
 
-    <div class="header-nav-toggle-btn">
-      <button aria-controls="primary-navigation" aria-expanded="false" aria-label="Ouvrir le menu principal">
-        <img src="assets/icons/ui/icon-burger.svg" alt="">
-      </button>
-    </div>
-  </header>
+      <div class="header-nav-toggle-btn">
+        <button aria-controls="primary-navigation" aria-expanded="false" aria-label="Ouvrir le menu principal">
+          <img src="assets/icons/ui/icon-burger.svg" alt="">
+        </button>
+      </div>
+    </header>
+  </div>
 
   <main class="content">
     <section class="hero">
@@ -46,12 +48,28 @@
       </div>
     </section>
 
+    <section class="layout-section">
+      <div class="gallery">
+        <div class="box box-one"><img src="assets/img/pages/galerie/mini_img_pizza_1.webp" alt="" class="gallery-item" data-large="assets/img/pages/galerie/large_img_pizza_1.webp"></div>
+        <div class="box box-two"><img src="assets/img/pages/galerie/mini_img_pizza_2.webp" alt="" class="gallery-item" data-large="assets/img/pages/galerie/large_img_pizza_2.webp"></div>
+        <div class="box box-three"><img src="assets/img/pages/galerie/mini_img_pizza_3.webp" alt="" class="gallery-item" data-large="assets/img/pages/galerie/large_img_pizza_3.webp"></div>
+        <div class="box box-four"><img src="assets/img/pages/galerie/mini_img_pizza_4.webp" alt="" class="gallery-item" data-large="assets/img/pages/galerie/large_img_pizza_4.webp"></div>
+        <div class="box box-five"><img src="assets/img/pages/galerie/mini_img_pizza_5.webp" alt="" class="gallery-item" data-large="assets/img/pages/galerie/large_img_pizza_5.webp"></div>
+        <div class="box box-six"><img src="assets/img/pages/galerie/mini_img_pizza_6.webp" alt="" class="gallery-item" data-large="assets/img/pages/galerie/large_img_pizza_6.webp"></div>
+      </div>
+      <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+          <span class="close-btn" id="closeLightbox">&times;</span>
+          <img id="lightboxImage" src="" alt="">
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
     <div class="footer-top">
       <div class="footer-brand">
-        <div class="logo">
+        <div class="logo footer-logo">
           <a href="index.html">
             <img src="assets/img/branding/logo.png" alt="Logo du site La Dolce Pizza, page d'accueil">
             <p class="high-text">La Dolce Pizza</p>
