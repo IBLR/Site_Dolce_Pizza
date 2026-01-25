@@ -35,7 +35,7 @@
 
   <main class="content">
     <section class="hero">
-      <img src="assets/img/backgrounds/hero-menu.webp" alt="">
+      <img src="assets/img/backgrounds/hero-menu.webp" alt="Le Menu">
       <div class="hero-content">
         <h1>Le Menu</h1>
         <p class="heading-subtitle">Retrouvez ici l’ensemble de nos pizzas et spécialités italiennes, préparées
@@ -46,6 +46,43 @@
       </div>
     </section>
 
+    <section id="anchor-shop" class="layout-section">
+      <div class="shop-layout">
+        <div class="shop-display-zone">
+          <div id="global-products" class="shop-product-cards-container"></div>
+          <p id="shop-user-message"></p>
+          <div class="shop-block-header">
+            <h2 class="category-title" data-category="pizza-classic">Pizzas Classiques</h2>
+            <div id="pizza-classic" class="shop-product-cards-container"></div>
+          </div>
+          <div class="shop-block-header">
+            <h2 class="category-title" data-category="pizza-special">Pizzas Spéciales</h2>
+            <div id="pizza-special" class="shop-product-cards-container"></div>
+          </div>
+          <div class="shop-block-header">
+            <h2 class="category-title" data-category="desserts">Desserts</h2>
+            <div id="desserts" class="shop-product-cards-container"></div>
+          </div>
+          <div class="shop-block-header">
+            <h2 class="category-title" data-category="drinks">Boissons</h2>
+            <div id="drinks" class="shop-product-cards-container"></div>
+          </div>
+        </div>
+
+        <aside class="shop-cart">
+          <h3 class="shop-cart-title">Votre commande</h3>
+          <div id="cart-items" class="shop-cart-items">
+            <p class="cart-empty">Panier vide</p>
+          </div>
+          <div class="shop-cart-footer">
+            <p class="cart-total">Total : <span id="cart-total-amount">0,00 €</span></p>
+            <button id="cart-validate" class="btn btn--secondary btn--square-lg">Valider la commande</button>
+            <button id="cart-clear" class="btn btn--third btn--square-lg">Vider le panier</button>
+            <div id="cart-message" class="cart-message">Commande validée avec succès</div>
+          </div>
+        </aside>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">

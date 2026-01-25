@@ -1,0 +1,114 @@
+[
+  {
+    "id" : "10001",
+    "name": "Margherita",
+    "category": "pizza-classic",
+    "description": "Sauce tomate savoureuse, mozzarella fondante et basilic frais, une pizza emblématique qui célèbre la simplicité.",
+    "amount": 8.50,
+    "image": "assets/img/pages/menu/pizza_margherita.jpg"
+  },
+  {
+    "id" : "10002",
+    "name": "Reine ",
+    "category": "pizza-classic",
+    "description": "Tomate, mozzarella, jambon et champignons, une recette généreuse et équilibrée aux saveurs familières.",
+    "amount": 10.00,
+    "image": "assets/img/pages/menu/pizza_reine.jpg"
+  },
+  {
+    "id" : "10003",
+    "name": "4 Fromages",
+    "category": "pizza-classic",
+    "description": "Un mélange fondant de fromages italiens, pour une pizza riche et pleine de caractère.",
+    "amount": 11.00,
+    "image": "assets/img/pages/menu/pizza_4_fromages.jpg"
+  },
+  {
+    "id" : "10004",
+    "name": "Pepperoni",
+    "category": "pizza-classic",
+    "description": "Sauce tomate, mozzarella et pepperoni légèrement épicé, pour une pizza au goût intense.",
+    "amount": 11.50,
+    "image": "assets/img/pages/menu/pizza_pepperoni.jpg"
+  },
+  {
+    "id" : "20001",
+    "name": "Dolce Vita",
+    "category": "pizza-special",
+    "description": "Tomate, mozzarella, jambon cru et copeaux de fromage, une pizza généreuse aux saveurs ensoleillées.",
+    "amount": 12.50,
+    "image": "assets/img/pages/menu/pizza_dolce_vita.jpg"
+  },
+  {
+    "id" : "20002",
+    "name": "Calzone",
+    "category": "pizza-special",
+    "description": "Pizza pliée et dorée au four, garnie de mozzarella, jambon et champignons fondants.",
+    "amount": 12.00,
+    "image": "assets/img/pages/menu/pizza_calzone.jpg"
+  },
+  {
+    "id" : "20003",
+    "name": "Sicilienne",
+    "category": "pizza-special",
+    "description": "Tomate, mozzarella et saveurs du sud, une pizza inspirée des recettes italiennes.",
+    "amount": 11.50,
+    "image": "assets/img/pages/menu/pizza_sicilienne.jpg"
+  },
+  {
+    "id" : "30001",
+    "name": "Tiramisu",
+    "category": "desserts",
+    "description": "Crème onctueuse, café et cacao, un dessert italien incontournable et tout en douceur.",
+    "amount": 5.00,
+    "image": "assets/img/pages/menu/tiramisu.jpg"
+  },
+  {
+    "id" : "30002",
+    "name": "Panna Cotta aux fruits rouges",
+    "category": "desserts",
+    "description": "Dessert délicat et fondant, accompagné de fruits rouges pour une touche fraîche et légèrement acidulée.",
+    "amount": 5.50,
+    "image": "assets/img/pages/menu/pana_cota_fruits_rouges.jpg"
+  },
+  {
+    "id" : "30003",
+    "name": "Gelato maison",
+    "category": "desserts",
+    "description": "Glace artisanale préparée sur place, aux parfums du moment, pour une pause fraîche et gourmande.",
+    "amount": 4.50,
+    "image": "assets/img/pages/menu/gelato_maison.jpg"
+  },
+  {
+    "id" : "40001",
+    "name": "Eau minérale",
+    "category": "drinks",
+    "description": "Eau plate ou pétillante, idéale pour accompagner votre repas en toute simplicité.",
+    "amount": 2.00,
+    "image": "assets/img/pages/menu/eau_minerale.jpg"
+  },
+  {
+    "id" : "40002",
+    "name": "Sodas",
+    "category": "drinks",
+    "description": "Une sélection de boissons fraîches et pétillantes pour compléter votre pizza.",
+    "amount": 2.50,
+    "image": "assets/img/pages/menu/sodas.jpg"
+  },
+  {
+    "id" : "40003",
+    "name": "Bière italienne",
+    "category": "drinks",
+    "description": "Bière légère et rafraîchissante, parfaite pour accompagner les saveurs italiennes.",
+    "amount": 4.00,
+    "image": "assets/img/pages/menu/biere_italienne.jpg"
+  },
+  {
+    "id" : "40004",
+    "name": "Verre de vin rouge",
+    "category": "drinks",
+    "description": "Vin soigneusement sélectionné, aux arômes équilibrés, idéal pour sublimer votre repas.",
+    "amount": 5.00,
+    "image": "assets/img/pages/menu/vin_rouge.jpg"
+  }
+]
