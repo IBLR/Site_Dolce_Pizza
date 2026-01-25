@@ -46,6 +46,78 @@
       </div>
     </section>
 
+    <section class="layout-section contact-section text-center">
+      <div class="contact-left-side-container">
+        <h2>Nos coordonnées</h2>
+        <div class="contact-block-details">
+          <div class="contact-sub-block-details">
+            <img src="assets/icons/pages/contact/" alt="">
+            <div class="contact-details-info">
+              <p class="high-text">Adresse</p>
+              <p>9 rue de la Calade<br>30000 Nîmes</p>
+            </div>
+          </div>
+          <div class="contact-sub-block-details">
+            <img src="assets/icons/pages/contact/" alt="">
+            <div class="contact-details-info">
+              <p class="high-text">Téléphone</p>
+              <p>04 12 34 56 78</p>
+            </div>
+          </div>
+          <div class="contact-sub-block-details">
+            <img src="assets/icons/pages/contact/" alt="">
+            <div class="contact-details-info">
+              <p class="high-text">Horaires</p>
+              <p>Mardi - Dimanche : 12h-14h30 & 19h-22h30<br>Lundi : Fermé</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-right-side-container">
+        <h2>Formulaire de réservation</h2>
+        <form class="contact-form-container" action="#" method="post" novalidate>
+          <div class="form-row-subcontainer">
+            <div class="form-field-block input-style">
+              <label for="last-name" class="high-text">Nom <span class="required-field" aria-hidden="true">*</span></label>
+              <input type="text" id="last-name" name="last-name" required aria-describedby="error-last-name" placeholder="Ex : DUPONT">
+              <span class="error-message" id="error-last-name" role="alert" aria-live="assertive"></span>
+            </div>
+            <div class="form-field-block input-style">
+              <label for="phone" class="high-text">Téléphone <span class="required-field" aria-hidden="true">*</span></label>
+              <input type="tel" id="phone" name="phone" aria-describedby="error-phone" placeholder="Ex : 06 12 34 56 78">
+              <span class="error-message" id="error-phone" role="alert" aria-live="assertive"></span>
+            </div>
+            <div class="form-block-date-time">
+              <div class="form-field-block input-style">
+                <label for="date" class="high-text">Date <span class="required-field" aria-hidden="true">*</span></label>
+                <input type="date" id="date" name="date" aria-describedby="error-date">
+                <span class="error-message" id="error-date" role="alert" aria-live="assertive"></span>
+              </div>
+              <div class="form-field-block input-style">
+                <label for="time" class="high-text">Heure <span class="required-field" aria-hidden="true">*</span></label>
+                <input type="time" id="time" name="time" aria-describedby="error-time">
+                <span class="error-message" id="error-time" role="alert" aria-live="assertive"></span>
+              </div>
+            </div>
+            <div class="form-field-block input-style">
+              <label for="number" class="high-text">Nombre de personnes (12 max.) <span class="required-field" aria-hidden="true">*</span></label>
+              <input type="number" id="number" name="number" aria-describedby="error-number">
+              <span class="error-message" id="error-number" role="alert" aria-live="assertive"></span>
+            </div>
+            <div class="form-field-block textarea-style">
+              <label for="message" class="high-text">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Décrivez-nous votre demande"></textarea>
+            </div>
+          </div>
+          <div class="form-row-subcontainer">
+            <button type="submit" class="btn btn--primary btn--square-lg">Envoyer</button>
+          </div>
+          <p id="form-success" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
   </main>
 
   <footer class="footer">
