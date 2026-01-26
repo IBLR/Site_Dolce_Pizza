@@ -10,6 +10,8 @@
 /*** Reset base ***/
 html {
   font-size: 100%;  /* For rem (preference user) */
+  scroll-padding-top: 120px;  /* Compensation for header padding */
+  margin-top: 100px;
 }
 
 body {
@@ -109,7 +111,6 @@ ol[role='list'] {
   /* Z-index scale */
   --z-base: 1;
   --z-header: 10;
-  --z-modal: 100;
 
   /* Color palette */
   --black: 47, 47, 47;  /* In rbg for shadows */
@@ -125,18 +126,14 @@ ol[role='list'] {
 body.theme {
   --color-bg-content: var(--white);
   --color-bg-header: var(--white);
-  /* --color-bg-footer: var(); */
+  --color-bg-footer: var(--white);
 
   --color-h1-content: var(--white);
-  /* --color-h2-content: var();
-  --color-h3-content: var();
-  --color-h4-content: var();
+  --color-h2-content: var(--black);
+  --color-h3-content: var(--black);
+  --color-h4-content: var(--black);
   --color-high-text-content: var();
-  --color-high-text-header: var();
-  --color-high-text-footer: var(); */
   --color-text-content: var(--black);
-  /* --color-text-header: var();
-  --color-text-footer: var(); */
 
   --color-btn-primary-bg: var(--green);
   --color-btn-primary-text: var(--white);
@@ -273,10 +270,6 @@ span.validated-field {
   flex-direction: column;
 }
 
-body {
-  padding-top: 100px;
-}
-
 /* ----------------------------------------------------------------------------------------- */
 
 /********** Content **********/
@@ -284,12 +277,12 @@ body {
 .content .heading-subtitle {
   color: var(--color-h1-content);
   text-shadow:
-    /* contour */
+    /* Outline */
     -1px -1px 0 rgba(var(--black), 0.2),
      1px -1px 0 rgba(var(--black), 0.2),
     -1px  1px 0 rgba(var(--black), 0.2),
      1px  1px 0 rgba(var(--black), 0.2),
-    /* ombre portée */
+    /* Cast shadow */
      var(--shadow-strong);
 }
 
@@ -396,7 +389,6 @@ body {
   border: 2px solid var(--color-btn-secondary-border-hover);
 }
 
-
 .btn--third {
   background-color: var(--color-btn-third-bg);
   color: var(--color-btn-third-text);
@@ -468,7 +460,7 @@ body {
 .header-nav a {
   font-family: var(--font-family-display);
   font-size: var(--font-size-high-text);
-  color: var(--color-text-header);
+  color: var(--color-text-content);
 }
 
 .header-nav a:hover,
@@ -545,7 +537,7 @@ body {
   flex-direction: column;
   padding: 20px clamp(20px, 3vw, 40px);
   background-color: var(--color-bg-footer);
-  color: var(--color-text-footer);
+  color: var(--color-text-content);
   border-top: 2px solid var(--color-border-decorative-1);
 }
 
@@ -604,7 +596,7 @@ footer .social-networks a {  /* Show focus outline on images */
 
 .sub-nav-title {
   font-size: var(--font-size-high-text);
-  color: var(--color-high-text-footer);
+  color: var(--color-high-text-content);
   font-weight: normal;
 }
 
@@ -706,7 +698,7 @@ footer .social-networks a {  /* Show focus outline on images */
   width: 100%;
   height: 420px;
   overflow: hidden;
-  background-color: #3ec25c;  /* Fallback */
+  background-color: var(--black);  /* Fallback */
 }
 
 .hero img {
@@ -928,7 +920,7 @@ p.heading-subtitle {
 }
 
 .contact-form-container label {
-  min-width: 6.25rem;  /* 100px (standard) */
+  min-width: 6.25rem;
   min-height: 25px;
   text-align: left;
 }
@@ -1201,7 +1193,7 @@ p.heading-subtitle {
 /* ----------------------------------------------------------------------------------------- */
 
 /********** Page "Galerie" **********/
-/* Gallery grid */
+/*** Gallery grid ***/
 .gallery { 
   justify-content: center;
   width: 100%;
@@ -1286,7 +1278,7 @@ p.heading-subtitle {
   }
 }
 
-/* Gallery lightbox */
+/*** Gallery lightbox ***/
 .lightbox {
   position: fixed;
   inset: 0;

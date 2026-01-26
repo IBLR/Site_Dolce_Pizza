@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>DOLCE PIZZA - Contact & Réservation</title>
+  <meta name="description" content="Toutes les informations pour nous contacter, réserver votre table ou découvrir nos recettes 
+  avant votre visite. Préparez votre expérience gastronomique chez La Dolce Pizza à Nîmes.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Isabelle BAILLY LE ROCH">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
 </head>
@@ -13,7 +17,7 @@
     <header class="header">
       <div class="logo">
         <a href="index.html">
-          <img src="assets/img/branding/logo.png" alt="Logo du site La Dolce Pizza, page d'accueil">
+          <img src="assets/img/branding/logo.webp" alt="Logo du site La Dolce Pizza, page d'accueil">
           <p class="high-text">La Dolce Pizza</p>
         </a>
       </div>
@@ -76,7 +80,7 @@
         </div>
       </div>
 
-      <div class="contact-right-side-container">
+      <div id="anchor-reservation" class="contact-right-side-container">
         <h2>Formulaire de réservation</h2>
         <form class="contact-form-container" action="#" method="post" novalidate>
           <div class="form-row-subcontainer">
@@ -113,13 +117,12 @@
             </div>
           </div>
           <div class="form-row-subcontainer">
-            <button type="submit" class="btn btn--primary btn--square-lg">Envoyer</button>
+            <button type="submit" class="btn btn--secondary btn--square-lg">Réserver</button>
           </div>
           <p id="form-success" role="status" aria-live="polite"></p>
         </form>
       </div>
     </section>
-
   </main>
 
   <footer class="footer">
@@ -127,7 +130,7 @@
       <div class="footer-brand">
         <div class="logo footer-logo">
           <a href="index.html">
-            <img src="assets/img/branding/logo.png" alt="Logo du site La Dolce Pizza, page d'accueil">
+            <img src="assets/img/branding/logo.webp" alt="Logo du site La Dolce Pizza, page d'accueil">
             <p class="high-text">La Dolce Pizza</p>
           </a>
         </div>
@@ -165,18 +168,18 @@
             <ul role="list">
               <li><a href="index.html#anchor-universe">Notre univers</a></li>
               <li><a href="index.html#anchor-story">Notre histoire</a></li>
-              <li><a href="donkeys.html#anchor-values">Nos valeurs</a></li>
-              <li><a href="donkeys.html#anchor-galery">La galerie</a></li>
-              <li><a href="donkeys.html#anchor-reservation">Réservation</a></li>
+              <li><a href="index.html#anchor-values">Nos valeurs</a></li>
+              <li><a href="galerie.html#anchor-galery">La galerie</a></li>
+              <li><a href="contact.html#anchor-reservation">Réservation</a></li>
             </ul>
           </li>
           <li role="list" class="sub-nav">
             <h2 class="sub-nav-title">Le Menu</h2>
             <ul role="list">
-              <li><a href="contact.html#anchor-classic-pizzas">Pizzas Classiques</a></li>
-              <li><a href="contact.html#anchor-special-pizzas">Pizzas Spéciales</a></li>
-              <li><a href="contact.html#anchor-desserts">Desserts</a></li>
-              <li><a href="contact.html#anchor-drinks">Boissons</a></li>
+              <li><a href="menu.html#anchor-classic-pizzas">Pizzas Classiques</a></li>
+              <li><a href="menu.html#anchor-special-pizzas">Pizzas Spéciales</a></li>
+              <li><a href="menu.html#anchor-desserts">Desserts</a></li>
+              <li><a href="menu.html#anchor-drinks">Boissons</a></li>
             </ul>
           </li>
           <li role="list" class="sub-nav">
@@ -197,9 +200,9 @@
       </div>
       <nav aria-label="Liens légaux">
         <ul role="list" class="legal">
-          <li><a href="/politique-confidentialite">Politique de confidentialité</a></li>
-          <li><a href="/mentions-legales">Mentions légales</a></li>
-          <li><a href="/cgv">CGV</a></li>
+          <li><a href="about:blank" target="_blank">Politique de confidentialité</a></li>
+          <li><a href="about:blank" target="_blank">Mentions légales</a></li>
+          <li><a href="about:blank" target="_blank">CGV</a></li>
         </ul>
       </nav>
     </div>

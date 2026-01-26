@@ -317,6 +317,18 @@ async function loadProducts() {
     message.textContent = "";
     message.style.display = "none";
 
+    /* Scroll to anchor if it's set in the URL */
+    const anchorId = window.location.hash.substring(1);
+    if (anchorId) {
+      const targetElement = document.getElementById(anchorId);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      }
+    }
+
   } catch (e) {
     console.error(e);
     message.textContent = "Chargement des produits impossible";
@@ -465,31 +477,28 @@ document.addEventListener('DOMContentLoaded', function() {
   const lightboxImage = document.getElementById('lightboxImage');
   const closeBtn = document.getElementById('closeLightbox');
 
-  // Ouvrir la lightbox en cliquant sur une image
+  /* Open the lightbox by clicking on an image */
   galleryItems.forEach(item => {
     item.addEventListener('click', (e) => {
       lightbox.style.display = 'flex';
-      // Récupère l'URL de l'image en grande taille depuis l'attribut data-large
       lightboxImage.src = e.target.getAttribute('data-large');
     });
   });
 
-  // Fermer la lightbox en cliquant sur la croix
+  /* Close the lightbox by clicking on the cross */
   if (closeBtn) {
     closeBtn.addEventListener('click', () => {
       lightbox.style.display = 'none';
     });
   }
-
+  /* Close the lightbox by clicking outside the image or by pressing Esc. */
   if (lightbox) {
-    // Fermer la lightbox en cliquant en dehors de l'image
     lightbox.addEventListener('click', (e) => {
       if (e.target === lightbox) {
         lightbox.style.display = 'none';
       }
     });
 
-    // Fermer la lightbox avec la touche Échap
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         lightbox.style.display = 'none';
