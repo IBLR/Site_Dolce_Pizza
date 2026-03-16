@@ -1,4 +1,4 @@
-# README - Site Vitrine La Dolce Pizza
+# PROJET FICTIF - Site frontend interactif "La Dolce Pizza"
 
 https://iblr.github.io/Site_Dolce_Pizza/
 
