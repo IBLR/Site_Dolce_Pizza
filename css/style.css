@@ -1008,7 +1008,6 @@ p.heading-subtitle {
   width: 300px;
   padding: 10px;
   border: 1px solid var(--color-border-decorative-1);
-  border-radius: var(--radius-sm);
   align-items: center;
   transition: border 0.2s ease, box-shadow 0.2s ease;
 }
@@ -1154,7 +1153,6 @@ p.heading-subtitle {
   background: rgba(0, 128, 0, 0.08);
   color: var(--green);
   font-weight: 600;
-  border-radius: var(--radius-sm);
 }
 
 .cart-message.is-visible {
